@@ -1,5 +1,21 @@
 from graph import *
 
+def mkcar(x,y,sc):
+	brushColor("black")
+	oval(x,y+30*sc,5*sc,3)
+
+	brushColor(77,210,210)
+	rectangle(x,y,x+200*sc,y+50*sc)
+	rectangle(x+50*sc,y,x+120*sc,y-30*sc)
+
+	brushColor("white")
+	rectangle(x+60*sc,y-8*sc,x+80*sc,y-25*sc)
+	rectangle(x+85*sc,y-8*sc,x+110*sc,y-25*sc)
+
+	brushColor("black")
+	circle(x+40*sc,y+50*sc,20*sc)
+	circle(x+175*sc,y+50*sc,20*sc)
+
 windowSize(500, 1000)
 penSize(0)
 
@@ -45,20 +61,7 @@ rectangle(350,310,460,80)
 brushColor(117,142,135)
 rectangle(300,390,410,150)
 
-brushColor("black")
-oval(200,530,5,3)
-
-brushColor(77,210,210)
-rectangle(200,500,400,550)
-rectangle(250,500,320,470)
-
-brushColor("white")
-rectangle(260,492,280,475)
-rectangle(285,492,310,475)
-
-brushColor("black")
-circle(240,550,20)
-circle(375,550,20)
+mkcar(200,500,1)
 
 
 penColor(163,176,172)
