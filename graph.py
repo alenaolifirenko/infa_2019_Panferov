@@ -193,7 +193,7 @@ def penSize(c = -1):
   else:
     return _penSize
 #----------------------------------
-def brushColor(c = -1, g = -1, b = -1):
+def brushColor(c = -1, g = -1, b = -1, bruh = 0):
   global _brushColor
   if type(c) == tuple: c, g, b = c
   if c != -1 :
@@ -285,6 +285,18 @@ def circle(x, y, R):
                  width = _penSize,
                  fill = _brushColor)
   return circ
+#----------------------------------
+def oval(x, y, R, e):
+  x1 = x - R*e; y1 = y - R
+  x2 = x + R*e; y2 = y + R
+  x1, y1 = transformCoord ( x1, y1 )
+  x2, y2 = transformCoord ( x2, y2 )
+  circ = _C.create_oval(x1, y1, x2, y2,
+                 outline = _penColor,
+                 width = _penSize,
+                 fill = _brushColor)
+  return oval
+
 #----------------------------------
 def polygon(points):
   coord = unpackCoord(points)
