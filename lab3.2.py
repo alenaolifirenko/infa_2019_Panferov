@@ -28,18 +28,26 @@ brushColor(asphalt)
 rectangle(0, 300, 500, 1000)
 
 brushColor(sky)
-rectangle(0, 0, 500, 300)
+rectangle(0, 0, 500, 350)
 
 brushColor(sky)
 rectangle(20, 350, 130, 300)
+
+brushColor(204, 255, 255)
+penColor('white')
+penSize(5)
+rectangle(0, 10, 250, 350)
+rectangle(230, 20, 500, 350)
+
+penSize(0)
 penColor(80, 171, 168)
 for i in range(55):
     line(20 + 2 * i, 350, 20 + 2 * i, 40)
 
-rectangle(140, 370, 250, 300)
+rectangle(140, 370, 250, 350)
 penColor(125, 154, 145)
 for i in range(55):
-    line(140 + 2 * i, 370, 140 + 2 * i, 65)
+    line(140 + 2 * i, 350, 140 + 2 * i, 65)
 
 brushColor(56, 71, 71)
 rectangle(100, 380, 210, 80)
